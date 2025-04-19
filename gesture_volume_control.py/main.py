@@ -73,9 +73,8 @@ while cap.isOpened():
             # Calculate the distance between fingertips
             distance = calculate_distance((thumb_x, thumb_y), (index_x, index_y))
             
-            # Map distance to volume range (adjust these values based on your hand size)
-            # Smaller distance -> lower volume, Larger distance -> higher volume
-            min_distance, max_distance = 30, 300
+            # Map distance to volume range 
+            min_distance, max_distance = 30, 100
             
             # Constrain the distance to the range
             distance = np.clip(distance, min_distance, max_distance)
