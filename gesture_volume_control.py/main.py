@@ -74,7 +74,7 @@ while cap.isOpened():
             distance = calculate_distance((thumb_x, thumb_y), (index_x, index_y))
             
             # Map distance to volume range 
-            min_distance, max_distance = 30, 100
+            min_distance, max_distance = 20, 100
             
             # Constrain the distance to the range
             distance = np.clip(distance, min_distance, max_distance)
